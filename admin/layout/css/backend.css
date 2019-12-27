@@ -6,6 +6,14 @@
         font-size: 16px;
     }
 
+    .asterisk {
+        font-size: 30px;
+        position: absolute;
+        right: 25px;
+        top: 5;
+        color: #d21313;
+    }
+
 /* ================== End Main Rules ====================
    ====================================================== */
 
@@ -40,7 +48,7 @@
 
 
 /* ======================================================
-    =============== Start Bootstrap Edit ================ */
+   ================ Start Bootstrap Edit ================ */
 
     .navbar {
         border-radius: 0;
@@ -61,19 +69,74 @@
     .navbar-dark .navbar-nav .show>.nav-link:focus,
     .navbar-dark .navbar-nav .show>.nav-link:hover,
     .dropdown-menu {
-        background-color: #3498db;
+        background-color: #0b5bab;
     }
 
     .dropdown-menu {
         border: none;
         margin: auto;
+        padding: 0;
         border-radius: 0;
     }
 
     .dropdown-item {
-        color: #ffffff;
+        color: #e6e6e6;
         padding: 0.3em 0.5em;
     }
+
+    .dropdown-item:focus,
+    .dropdown-item:hover {
+        color: #e6e6e6;
+        background-color: #8e448e;
+    }
+
+    .form-control {
+        position: relative;
+    }
+
+
 /* ================ End Bootstrap Edit ==================
    ====================================================== */
 
+
+
+/* ======================================================
+   ================== Start Member Page ================= */
+
+    h1 {
+        font-size: 35px;
+        margin: 20px 0;
+        font-weight: bold;
+        color: #666666;
+    }
+
+    .show-pass {
+        position: absolute;
+        top: 7px;
+        right: -30px;
+    }
+
+    .main-table {
+        -webkit-box-shadow: 0px 3px 10px #ccc;
+        -moz-box-shadow: 0px 3px 10px #ccc;
+        box-shadow: 0px 3px 10px #ccc;
+    }
+
+    .main-table td {
+        background-color: #fff;
+        padding: .4em;
+        vertical-align: middle;
+    }
+
+    .main-table tr:first-child td {
+        background-color: #343a40;
+        color: rgb(167, 167, 167);
+    }
+
+    .main-table .btn {
+        padding: .1em 0.3em;
+        border: none;   
+    }
+
+/* ================== End Member Page ===================
+   ====================================================== */

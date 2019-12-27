@@ -3,11 +3,14 @@
 
     // Routes
     $tp1    = 'includes/templates/';
+    $lang   = 'includes/languages/';
+    $func   = 'includes/functions/';
     $css    = 'layout/css/';
     $js     = 'layout/js/';
-    $lang   = 'includes/languages/';
+    
 
     //Include Important Files
+    include $func . 'functions.php';
     include $lang . 'english.php';
     include $tp1 . 'header.php';
 

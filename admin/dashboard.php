@@ -1,8 +1,9 @@
 <?php 
     session_start();
-    if (isset($_SESSION['username'])) {
+    if (isset($_SESSION['userName'])) {
+        $pageTitle = 'Dashboard';
         include 'init.php';
-        echo 'Welcome';
+        print_r($_SESSION);
         include $tp1 . 'footer.php';
     }
     else {

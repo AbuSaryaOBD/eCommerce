@@ -1,7 +1,8 @@
 <?php 
     session_start();
     $noNavbar = '';
-    if (isset($_SESSION['username'])) {
+    $pageTitle = 'Login';
+    if (isset($_SESSION['userName'])) {
         header('Location: dashboard.php');
     }
 
@@ -14,14 +15,18 @@
         $hasdPass = sha1($password);
         
         //Check If The User Exist In DB
-        $stmt = $con->prepare("SELECT user_name,password FROM users WHERE user_name = ? AND password = ? AND group_id = 1");
+        $stmt = $con->prepare("SELECT user_id,user_name,password FROM users 
+                               WHERE user_name = ? AND password = ? AND group_id = 1
+                               LIMIT 1");
         $stmt->execute(array($username,$hasdPass));
+        $row = $stmt->fetch();
         $count = $stmt->rowCount();
         
         //If Count > 0 => DB Found Data For The User
-        if ($count>0) {
-            $_SESSION['username'] = $username;
-            
+        if ($count > 0) {
+            $_SESSION['userName'] = $username;
+            $_SESSION['id'] = $row['user_id'];
+            header('Location: dashboard.php');
             exit();
         }
     }

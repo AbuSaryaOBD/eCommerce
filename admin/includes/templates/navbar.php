@@ -14,7 +14,7 @@
                 <a class="nav-link" href="#"><?php echo lang('ITEMS') ?></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><?php echo lang('MEMBERS') ?></a>
+                <a class="nav-link" href="members.php"><?php echo lang('MEMBERS') ?></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><?php echo lang('STATISTICS') ?></a>
@@ -29,10 +29,10 @@
                 Obada Al Dakkak
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#"><?php echo lang('EDIT_PROFILE') ?></a>
+                <a class="dropdown-item" href="members.php?do=Edit&userId=<?php echo $_SESSION['id']; ?>"><?php echo lang('EDIT_PROFILE') ?></a>
                 <a class="dropdown-item" href="#"><?php echo lang('SETTING') ?></a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><?php echo lang('LOGOUT') ?></a>
+                <div class="dropdown-divider" style="border-color: #e6e6e6;"></div>
+                <a class="dropdown-item" href="logout.php"><?php echo lang('LOGOUT') ?></a>
                 </div>
             </li>
         </ul>
